@@ -6,12 +6,13 @@ import Vedio from './Pages/Vedio/Vedio'
 
 const App =()=>{
   const [sidebar , setSidebar]=useState(true);
+  const [search ,setSearch]= useState("")
   return(
     <>
     
-<Navbar setSidebar={setSidebar} />
+<Navbar setSidebar={setSidebar} setSearch={setSearch} />
 <Routes>
-  <Route path='/' element={<Home  sidebar={sidebar} />} />
+  <Route path='/' element={<Home  sidebar={sidebar} search={search} />} />
   <Route path='/vedio/:categoryId/:vedioId' element={<Vedio />}/>
   
 </Routes>

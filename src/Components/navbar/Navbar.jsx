@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import menu_icon from '../../assets/menu.png'
 import logo_icon from '../../assets/logo.png'
@@ -8,7 +8,10 @@ import more_icon from '../../assets/more.png'
 import notification_icon from '../../assets/notification.png'
 import jack_icon from '../../assets/jack.png'
 import {Link} from 'react-router-dom'
-const Navbar = ({setSidebar}) => {
+const Navbar = ({setSidebar , setSearch}) => {
+   const [search1, setSearch1]= useState("")
+   
+   
     return (
         <nav className='flex-div '>
             <div className='nav-left flex-div'>
@@ -17,8 +20,8 @@ const Navbar = ({setSidebar}) => {
             </div>
             <div className='nav-middle flex-div'>
                 <div className='search-box flex-div '>
-                <input type='text' placeholder='Search'></input>
-                <img src={Search_icon} alt="" />
+                <input type='text' placeholder='Search' onChange={(e)=>setSearch1(e.target.value)}></input>
+                <img src={Search_icon} alt="" onClick={()=>setSearch(search1)} />
 
                 </div>
             </div>
