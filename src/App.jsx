@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './Components/navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
-import Home from './Pages/home/home'
+import Home from './Pages/home/Home'
 import Vedio from './Pages/Vedio/Vedio'
 
 const App =()=>{
@@ -15,7 +15,7 @@ const App =()=>{
   <Route path='/' element={<Home  sidebar={sidebar} search={search} />} />
   <Route path='/vedio/:categoryId/:vedioId' element={<Vedio />}/>
   
-</Routes>
+</Routes> 
     </>
   )
 }
