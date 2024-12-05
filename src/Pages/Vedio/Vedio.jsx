@@ -9,7 +9,7 @@ const Vedio=()=>{
     <>
 <div className='play-container'>
   <Playvedio vedioId={vedioId} />
-  <Rec  />
+  <Rec categoryId={categoryId} />
 </div>
     </>
   )
